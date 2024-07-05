@@ -38,4 +38,8 @@ public class QrCodeController {
             return ResponseEntity.status(500).body(new byte[0]); // Internal Server Error
         }
     }
+    @GetMapping(value = "/test")
+    public ResponseEntity<String> getString() {
+            return ResponseEntity.ok().body("Hello");
+    }
 }

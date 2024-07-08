@@ -49,6 +49,14 @@ const QR_Generator = () => {
       setQrImage(null);
       setError('');
     }
+    const downloadImage = (format) => {
+    if (!qrImage) return;
+
+    const link = document.createElement('a');
+    link.href = qrImage;
+    link.download = `QRCode.${format}`;
+    link.click();
+  }
   
     return (
         <div className="container">
